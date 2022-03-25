@@ -49,7 +49,7 @@ optimizer = optim.SGD(params=model.parameters(), lr=0.01, momentum=0.9)
 # 开始迭代
 def train(epoch):
     total_loss = 0.0
-    for i, (x, y) in enumerate(iterable=test_loader, start=0):
+    for i, (x, y) in enumerate(iterable=train_loader, start=0):
         y_pred = model(x)
         loss = criterion(y_pred, y)
         optimizer.zero_grad()
